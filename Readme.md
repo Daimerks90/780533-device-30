@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
-* Студент: [Александр Васильцов](https://up.htmlacademy.ru/htmlcss/30/user/780533).
-* Наставник: `Неизвестно`.
+- Студент: [Александр Васильцов](https://up.htmlacademy.ru/htmlcss/30/user/780533).
+- Наставник: [Сергей Харлов](https://htmlacademy.ru/profile/links).
 
 ---
 
