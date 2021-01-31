@@ -1,0 +1,411 @@
+/* Fonts */
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("../fonts/opensanslight.woff2") format("woff2"),
+    url("../fonts/opensanslight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src:
+    url("../fonts/gilroyextrabold.woff2") format("woff2"),
+    url("../fonts/gilroyextrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src:
+    url("../fonts/gilroylight.woff2") format("woff2"),
+    url("../fonts/gilroylight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Variables */
+:root {
+  --basic-black: #000000;
+  --basic-black-op4:  rgba(0, 0, 0, 0.4);
+  --basic-dark: #363636;
+  --basic-white: #FFFFFF;
+  --basic-white-op3: rgba(255, 255, 255, 0.3);
+  --basic-white-op6: rgba(255, 255, 255, 0.6);
+  --basic-white-op7: rgba(255, 255, 255, 0.7);
+  --basic-grey: #464646;
+  --basic-half-grey: #7E7E7E;
+  --basic-grey-light: #E5E5E5;
+  --special-grey: #F2F2F2;
+  --special-yellow: #F7E296;
+  --special-yellow-dark: #F0C52E;
+}
+
+/* Global */
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 300;
+  color: var(--basic-black);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Main-link */
+.main-link {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--basic-black);
+}
+
+.main-link:focus {
+  opacity: 0.3;
+}
+
+/* Main Title */
+.main-title {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 47px;
+  line-height: 58px;
+  font-weight: 800;
+}
+
+/* Header */
+.main-header {
+  background-color: var(--special-yellow);
+}
+
+/* Logo */
+.logo:hover,
+.logo:active {
+  opacity: 0.6;
+}
+
+.logo:focus {
+  opacity: 0.3;
+}
+
+/* Search */
+.search-label {
+  line-height: 20px;
+}
+
+.search-input {
+  font: inherit;
+}
+
+/* Login, Compare, Basket*/
+.login-link,
+.compare-link,
+.basket-link {
+  line-height: 20px;
+  color: var(--basic-black);
+  text-decoration: none;
+}
+
+.login-link:hover,
+.compare-link:hover,
+.basket-link:hover,
+.login-link:active,
+.compare-link:active,
+.basket-link:active {
+  opacity: 0.6;
+}
+
+.login-link:focus,
+.compare-link:focus,
+.basket-link:focus {
+  opacity: 0.3;
+}
+
+.login-link-footer,
+.compare-link-footer,
+.basket-link-footer {
+  color: var(--basic-white-op7);
+}
+
+.login-link-footer:hover,
+.compare-link-footer:hover,
+.basket-link-footer:hover,
+.login-link-footer:active,
+.compare-link-footer:active,
+.basket-link-footer:active {
+  opacity: 1;
+  color: var(--basic-white);
+}
+
+.login-link-footer:focus,
+.compare-link-footer:focus,
+.basket-link-footer:focus {
+  color: var(--basic-white-op3);
+}
+
+/* Navigation */
+.nav-list {
+  list-style: none;
+}
+
+.nav-link {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--basic-black);
+}
+
+.nav-link:first-child {
+  letter-spacing: 0.1em; /* Вопрос - не выделяет первый элемент, а выделяет всех */
+}
+
+.nav-link:hover,
+.nav-link:active {
+  opacity: 0.6;
+}
+
+.nav-link:focus {
+  opacity: 0.3;
+}
+
+.nav-catalog-list {
+  list-style: none;
+}
+
+.nav-catalog-link {
+  line-height: 20px;
+  text-decoration: none;
+  color: var(--basic-black);
+}
+
+.nav-catalog-link:hover,
+.nav-catalog-link:active {
+  opacity: 0.6;
+}
+
+.nav-catalog-link:focus {
+  opacity: 0.3;
+}
+
+/* Slides */
+.slides-list {
+  list-style: none;
+}
+
+.slides-counter {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 179px;
+  line-height: 219px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+
+.slides-item-properties {
+  font-family: "Gilroy", Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.slides-item-term {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.slides-item-desc {
+  font-size: 36px;
+  line-height: 42px;
+}
+
+/* Categories */
+.categories-list {
+  list-style: none;
+}
+
+.categories-link {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: var(--basic-black);
+}
+
+.categories-img-wrap {
+  text-align: center;
+  background-color: var(--special-yellow);
+}
+
+.categories-link:hover .categories-img-wrap,
+.categories-link:active .categories-img-wrap {
+  background-color: var(--special-yellow-dark);
+}
+
+.categories-link:focus .categories-img,
+.categories-link:focus {
+  opacity: 0.3;
+}
+
+/* Features */
+.features-triggers {
+  list-style: none;
+}
+
+.features-trigger-link {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.features-trigger-link-current {
+  color: var(--special-yellow);
+}
+
+.features-list {
+  list-style: none;
+}
+
+.features-title {
+  letter-spacing: 0.2em;
+}
+
+.features-desc {
+  line-height: 30px;
+  letter-spacing: 0.1em;
+}
+
+/* Partners */
+.partners-list {
+  list-style: none;
+}
+
+.partners-item:hover .partners-img {
+  filter: grayscale(1); /* Можно ли так сделать или подгружать картинку при наведении?  */
+}
+
+/* About */
+.about-transports {
+  list-style: none;
+}
+
+.about-transport {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+/* Footer */
+.main-footer {
+  background-color: var(--basic-dark);
+  color: var(--basic-white-op7);
+}
+
+.main-footer{
+  list-style: none;
+}
+
+.main-footer-link {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--basic-white);
+}
+
+.main-footer-link:hover,
+.main-footer-link:active {
+  color: var(--basic-white-op6);
+}
+
+.main-footer-link:focus {
+  color: var(--basic-white-op3);
+}
+
+.main-footer-phone {
+  font-style: normal;
+  line-height: 20px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Socials*/
+.socials-list {
+  list-style: none;
+}
+
+/* Modals */
+.modal-write {
+  background-color: var(--basic-white);
+}
+
+.modal-close {
+  background-color: var(--special-yellow);
+  opacity: 0.5;
+}
+
+.modal-close:hover,
+.modal-close:active {
+  background-color: var(--special-yellow-dark);
+  opacity: 1;
+}
+
+.modal-close:focus {
+  background-color: var(--special-yellow-dark);
+  opacity: 0.3;
+}
+
+/* Write form */
+.write-form-label {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.write-form-input {
+  font: inherit;
+  background-color: var(--special-grey);
+}
+
+.write-form-input::placeholder {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--basic-black-op4);
+}
+
+.write-form-text {
+  font: inherit;
+  background-color: var(--special-grey);
+  color: var(--basic-black-op4);
+}
