@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
@@ -7,108 +7,114 @@
     <link rel="icon" href="img/favicons/152.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header>
-      <a href="index.html">
-        <img src="img/logo_device.svg" width="163" height="35" alt="Логотип интернет-магазина Device">
+  <body class="page-body">
+    <header class="main-header">
+      <a class="logo" href="index.html">
+        <img class="logo-img" src="img/logo_device.svg" width="163" height="35" alt="Логотип интернет-магазина Device">
       </a>
-      <form action="https://echo.htmlacademy.ru/" method="get">
-        <label>
-          <input type="text" name="search" placeholder="Поиск по сайту">
+      <form class="search" action="https://echo.htmlacademy.ru/" method="get">
+        <label class="search-label">
+          <input class="search-input" type="text" name="search">
           Поиск по сайту
         </label>
       </form>
-      <a href="#">Войти</a>
-      <a href="#">Сравнить</a>
-      <a href="#">Корзина</a>
-      <nav>
-        <ul>
-          <li>
-            <a href="catalog.html">Каталог товаров</a>
-            <ul>
-              <li>
-                <a href="catalog.html">Виртуальная реальность</a>
+      <div class="nav-user-links">
+        <a class="login-link" href="#">Войти</a>
+        <a class="compare-link" href="#">Сравнить</a>
+        <a class="basket-link" href="#">Корзина</a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="catalog.html">Каталог товаров</a>
+            <ul class="nav-catalog-list">
+              <li class="nav-catalog-item">
+                <a class="nav-catalog-link" href="catalog.html">Виртуальная реальность</a>
               </li>
-              <li>
-                <a href="catalog.html">Моноподы для селфи</a>
+              <li class="nav-catalog-item">
+                <a class="nav-catalog-link" href="catalog.html">Моноподы для селфи</a>
               </li>
-              <li>
-                <a href="catalog.html">Экшн-камеры</a>
+              <li class="nav-catalog-item">
+                <a class="nav-catalog-link" href="catalog.html">Экшн-камеры</a>
               </li>
-              <li>
-                <a href="catalog.html">Фитнес-браслеты</a>
+              <li class="nav-catalog-item">
+                <a class="nav-catalog-link" href="catalog.html">Фитнес-браслеты</a>
               </li>
-              <li>
-                <a href="catalog.html">Умные часы</a>
+              <li class="nav-catalog-item">
+                <a class="nav-catalog-link" href="catalog.html">Умные часы</a>
               </li>
-              <li>
-                <a href="catalog.html">Квадрокоптер</a>
+              <li class="nav-catalog-item">
+                <a class="nav-catalog-link" href="catalog.html">Квадрокоптер</a>
               </li>
             </ul>
           </li>
-          <li>
-            <a href="#">Доставка</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Доставка</a>
           </li>
-          <li>
-            <a href="#">Гарантия</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Гарантия</a>
           </li>
-          <li>
-            <a href="#">Контакты</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <h1>Пустая страница</h1>
-      <ul>
-        <li>
-          <a href="index.html">Главная</a>
+    <main class="main">
+      <h1 class="main-title">Пустая страница</h1>
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link" href="index.html">Главная</a>
         </li>
-        <li>
-          <a>Пустая страница</a>
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link breadcrumbs-link-current">Пустая страница</a>
         </li>
       </ul>
     </main>
 
-    <footer>
-      <div>
-        <a href="index.html">
-          <img src="img/logo_device_footer.svg" width="163" height="35" alt="Логотип интернет-магазина Device">
+    <footer class="main-footer">
+      <div class="container">
+        <a class="logo" href="index.html">
+          <img class="logo-img" src="img/logo_device_footer.svg" width="163" height="35" alt="Логотип интернет-магазина Device">
         </a>
-        <a href="#">Войти</a>
-        <a href="#">Сравнить</a>
-        <a href="#">Корзина</a>
+        <div class="nav-user-links nav-user-links-footer">
+          <a class="login-link login-link-footer" href="#">Войти</a>
+          <a class="compare-link compare-link-footer" href="#">Сравнить</a>
+          <a class="basket-link basket-link-footer" href="#">Корзина</a>
+        </div>
         <p>
           г. Москва, ул. Строителей, 15
         </p>
-        <ul>
-          <li>
-            <a href="#">Доставка</a>
+        <ul class="main-footer-nav">
+          <li class="main-footer-item">
+            <a class="main-footer-link" href="#">Доставка</a>
           </li>
-          <li>
-            <a href="#">Гарантия</a>
+          <li class="main-footer-item">
+            <a class="main-footer-link" href="#">Гарантия</a>
           </li>
-          <li>
-            <a href="#">Контакты</a>
+          <li class="main-footer-item">
+            <a class="main-footer-link" href="#">Контакты</a>
           </li>
         </ul>
         <address>
-          <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+          <a class="main-footer-phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
         </address>
-        <ul>
-          <li>
-            <a href="#">facebook</a>
+        <ul class="socials-list">
+          <li class="socials-item">
+            <a class="socials-link" href="#">facebook</a>
           </li>
-          <li>
-            <a href="#">instagram</a>
+          <li class="socials-item">
+            <a class="socials-link" href="#">instagram</a>
           </li>
-          <li>
-            <a href="#">twitter</a>
+          <li class="socials-item">
+            <a class="socials-link" href="#">twitter</a>
           </li>
         </ul>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">Логотип HTML ACADEMY</a>
+        <a class="logo-html" href="https://htmlacademy.ru/intensive/htmlcss">Логотип HTML ACADEMY</a>
       </div>
     </footer>
   </body>
