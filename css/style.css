@@ -50,11 +50,13 @@
   --special-grey: #F2F2F2;
   --special-yellow: #F7E296;
   --special-yellow-dark: #F0C52E;
+  --main-font: "Open Sans", Arial, sans-serif;
+  --secondary-font: "Gilroy", Arial, sans-serif;
 }
 
 /* Global */
 body {
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: var(--main-font);
   font-size: 15px;
   line-height: 28px;
   font-weight: 300;
@@ -68,7 +70,7 @@ img {
 
 /* Main-link */
 .main-link {
-  font-family: "Gilroy", Arial, sans-serif;
+  font-family: var(--secondary-font);
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -84,7 +86,7 @@ img {
 
 /* Main Title */
 .main-title {
-  font-family: "Gilroy", Arial, sans-serif;
+  font-family: var(--secondary-font);
   font-size: 47px;
   line-height: 58px;
   font-weight: 800;
@@ -115,48 +117,32 @@ img {
 }
 
 /* Login, Compare, Basket*/
-.login-link,
-.compare-link,
-.basket-link {
+.nav-user-links a {
   line-height: 20px;
   color: var(--basic-black);
   text-decoration: none;
 }
 
-.login-link:hover,
-.compare-link:hover,
-.basket-link:hover,
-.login-link:active,
-.compare-link:active,
-.basket-link:active {
+.nav-user-links a:hover,
+.nav-user-links a:active {
   opacity: 0.6;
 }
 
-.login-link:focus,
-.compare-link:focus,
-.basket-link:focus {
+.nav-user-links a:focus {
   opacity: 0.3;
 }
 
-.login-link-footer,
-.compare-link-footer,
-.basket-link-footer {
+.nav-user-links-footer a {
   color: var(--basic-white-op7);
 }
 
-.login-link-footer:hover,
-.compare-link-footer:hover,
-.basket-link-footer:hover,
-.login-link-footer:active,
-.compare-link-footer:active,
-.basket-link-footer:active {
+.nav-user-links-footer a:hover,
+.nav-user-links-footer a:active {
   opacity: 1;
   color: var(--basic-white);
 }
 
-.login-link-footer:focus,
-.compare-link-footer:focus,
-.basket-link-footer:focus {
+.nav-user-links-footer a:focus {
   color: var(--basic-white-op3);
 }
 
@@ -166,7 +152,7 @@ img {
 }
 
 .nav-link {
-  font-family: "Gilroy", Arial, sans-serif;
+  font-family: var(--secondary-font);
   font-size: 18px;
   line-height: 22px;
   font-weight: 800;
@@ -174,10 +160,6 @@ img {
   text-transform: uppercase;
   text-decoration: none;
   color: var(--basic-black);
-}
-
-.nav-link:first-child {
-  letter-spacing: 0.1em; /* Вопрос - не выделяет первый элемент, а выделяет всех */
 }
 
 .nav-link:hover,
@@ -214,7 +196,7 @@ img {
 }
 
 .slides-counter {
-  font-family: "Gilroy", Arial, sans-serif;
+  font-family: var(--secondary-font);
   font-weight: 800;
   font-size: 179px;
   line-height: 219px;
@@ -223,7 +205,7 @@ img {
 }
 
 .slides-item-properties {
-  font-family: "Gilroy", Arial, sans-serif;
+  font-family: var(--secondary-font);
   letter-spacing: 0.1em;
 }
 
@@ -243,7 +225,7 @@ img {
 }
 
 .categories-link {
-  font-family: "Gilroy", Arial, sans-serif;
+  font-family: var(--secondary-font);
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -273,7 +255,7 @@ img {
 }
 
 .features-trigger-link {
-  font-family: "Gilroy", Arial, sans-serif;
+  font-family: var(--secondary-font);
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -305,8 +287,12 @@ img {
   list-style: none;
 }
 
-.partners-item:hover .partners-img {
-  filter: grayscale(1); /* Можно ли так сделать или подгружать картинку при наведении?  */
+.partners-img {
+  filter: grayscale(1);
+}
+
+.partners-img:hover  {
+  filter: grayscale(0);
 }
 
 /* About */
@@ -315,7 +301,7 @@ img {
 }
 
 .about-transport {
-  font-family: "Gilroy", Arial, sans-serif;
+  font-family: var(--secondary-font);
   font-weight: 800;
   font-size: 16px;
 }
@@ -331,7 +317,7 @@ img {
 }
 
 .main-footer-link {
-  font-family: "Gilroy", Arial, sans-serif;
+  font-family: var(--secondary-font);
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -385,7 +371,7 @@ img {
 
 /* Write form */
 .write-form-label {
-  font-family: "Gilroy", Arial, sans-serif;
+  font-family: var(--secondary-font);
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -397,7 +383,7 @@ img {
 }
 
 .write-form-input::placeholder {
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: var(--main-font);
   font-weight: normal;
   font-size: 14px;
   line-height: 19px;
