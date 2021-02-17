@@ -17,10 +17,9 @@
           <img class="logo-img" src="img/logo_device.svg" width="163" height="35" alt="Логотип интернет-магазина Device">
         </a>
         <form class="search" action="https://echo.htmlacademy.ru/" method="get">
-          <label class="search-label">
-            <input class="search-input" type="text" name="search">
-            Поиск по сайту
-          </label>
+          <label class="visually-hidden" id="search-field">Поиск по сайту</label>
+          <input class="search-input" type="text" name="search" id="search-field" placeholder="Поиск по сайту">
+          <button class="search-button" type="submit">Найти</button>
         </form>
         <div class="nav-user-links">
           <p class="nav-user-name">
@@ -33,27 +32,29 @@
         <nav class="nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <a class="nav-link">Каталог товаров</a>
-              <ul class="nav-catalog-list">
-                <li class="nav-catalog-item">
-                  <a class="nav-catalog-link" href="#">Виртуальная реальность</a>
-                </li>
-                <li class="nav-catalog-item">
-                  <a class="nav-catalog-link" href="#">Моноподы для селфи</a>
-                </li>
-                <li class="nav-catalog-item">
-                  <a class="nav-catalog-link" href="#">Экшн-камеры</a>
-                </li>
-                <li class="nav-catalog-item">
-                  <a class="nav-catalog-link" href="#">Фитнес-браслеты</a>
-                </li>
-                <li class="nav-catalog-item">
-                  <a class="nav-catalog-link" href="#">Умные часы</a>
-                </li>
-                <li class="nav-catalog-item">
-                  <a class="nav-catalog-link" href="#">Квадрокоптер</a>
-                </li>
-              </ul>
+              <div class="nav-link-catalog">
+                <a class="nav-link">Каталог товаров</a>
+                <ul class="nav-catalog-list">
+                  <li class="nav-catalog-item">
+                    <a class="nav-catalog-link" href="#">Виртуальная реальность</a>
+                  </li>
+                  <li class="nav-catalog-item">
+                    <a class="nav-catalog-link" href="#">Моноподы для селфи</a>
+                  </li>
+                  <li class="nav-catalog-item">
+                    <a class="nav-catalog-link" href="#">Экшн-камеры</a>
+                  </li>
+                  <li class="nav-catalog-item">
+                    <a class="nav-catalog-link" href="#">Фитнес-браслеты</a>
+                  </li>
+                  <li class="nav-catalog-item">
+                    <a class="nav-catalog-link" href="#">Умные часы</a>
+                  </li>
+                  <li class="nav-catalog-item">
+                    <a class="nav-catalog-link" href="#">Квадрокоптер</a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="blank.html">Доставка</a>
@@ -97,41 +98,51 @@
               <fieldset class="filter-fieldset">
                 <legend class="filter-legend">Стоимость</legend>
                 <div class="filter-range">
-                  от 0 <!--Здесь будет диапозон цен-->  до 5000
+                  <div class="filter-range-controls">
+                    <div class="filter-range-scale">
+                      <div class="filter-range-bar"></div>
+                    </div>
+                    <div class="filter-range-toggle filter-range-toggle-min"></div>
+                    <div class="filter-range-toggle filter-range-toggle-max"></div>
+                  </div>
+                  <div class="filter-range-price">
+                    <span class="filter-range-price-from">от 0</span>
+                    <span class="filter-range-price-to"> до 5000</span>
+                  </div>
                 </div>
               </fieldset>
               <fieldset class="filter-fieldset">
                 <legend class="filter-legend">Цвет</legend>
-                <div>
-                  <input class="filter-checkbox" type="checkbox" name="color" id="color-black" value="black" checked>
+                <div class="filter-col">
+                  <input class="filter-checkbox visually-hidden" type="checkbox" name="color" id="color-black" value="black" checked>
                   <label class="filter-label" for="color-black">Черный</label>
                 </div>
-                <div>
-                  <input class="filter-checkbox" type="checkbox" name="color" id="color-white" value="white">
+                <div class="filter-col">
+                  <input class="filter-checkbox visually-hidden" type="checkbox" name="color" id="color-white" value="white">
                   <label class="filter-label" for="color-white">Белый</label>
                 </div>
-                <div>
-                  <input class="filter-checkbox" type="checkbox" name="color" id="color-blue" value="blue" checked>
+                <div class="filter-col">
+                  <input class="filter-checkbox visually-hidden" type="checkbox" name="color" id="color-blue" value="blue" checked>
                   <label class="filter-label" for="color-blue">Синий</label>
                 </div>
-                <div>
-                  <input class="filter-checkbox" type="checkbox" name="color" id="color-red" value="red" checked>
+                <div class="filter-col">
+                  <input class="filter-checkbox visually-hidden" type="checkbox" name="color" id="color-red" value="red" checked>
                   <label class="filter-label" for="color-red">Красный</label>
                 </div>
-                <div>
-                  <input class="filter-checkbox" type="checkbox" name="color" id="color-pink" value="pink">
+                <div class="filter-col">
+                  <input class="filter-checkbox visually-hidden" type="checkbox" name="color" id="color-pink" value="pink">
                   <label class="filter-label" for="color-pink">Розовый</label>
                 </div>
               </fieldset>
               <fieldset class="filter-fieldset">
                 <legend class="filter-legend">Bluetooth</legend>
-                <div>
-                  <input type="radio" name="blt" id="blt-on" checked>
-                  <label for="blt-on">Есть</label>
+                <div class="filter-col">
+                  <input class="filter-radio visually-hidden" type="radio" name="blt" id="blt-on" checked>
+                  <label class="filter-label" for="blt-on">Есть</label>
                 </div>
-                <div>
-                  <input type="radio" name="blt" id="blt-off">
-                  <label for="blt-off">Нет</label>
+                <div class="filter-col">
+                  <input class="filter-radio visually-hidden" type="radio" name="blt" id="blt-off">
+                  <label class="filter-label" for="blt-off">Нет</label>
                 </div>
               </fieldset>
               <button class="main-link filter-submit" type="submit">Показать</button>
@@ -140,7 +151,7 @@
         </section>
 
         <section class="catalog">
-          <h2 class="hide">Список товаров</h2>
+          <h2 class="visually-hidden">Список товаров</h2>
           <div class="sort">
             <div class="catalog-wrap-sort">
               <div class="catalog-col">
@@ -156,10 +167,10 @@
                     <a class="sort-link" href="#">По популярности</a>
                   </li>
                   <li class="sort-item">
-                    <a class="sort-link" href="#">По возрастанию</a>
+                    <a class="sort-link sort-link-asc" href="#" aria-label="По возрастанию"></a>
                   </li>
                   <li class="sort-item">
-                    <a class="sort-link" href="#">По убыванию</a>
+                    <a class="sort-link sort-link-desc" href="#" aria-label="По убыванию"></a>
                   </li>
                 </ul>
               </div>
@@ -227,7 +238,7 @@
             <img class="logo-img" src="img/logo_device_footer.svg" width="163" height="35" alt="Логотип интернет-магазина Device">
           </a>
           <div class="nav-user-links nav-user-links-footer">
-            <p class="nav-user-name">
+            <p class="nav-user-name nav-user-name-footer">
               Валентин Петухов
               <a class="login-link login-link-footer" href="blank.html">Выйти</a>
             </p>
@@ -257,16 +268,16 @@
         <div class="main-footer-bottom">
           <ul class="socials-list">
             <li class="socials-item">
-              <a class="socials-link" href="#">facebook</a>
+              <a class="socials-link socials-link-facebook" href="#" aria-label="facebook"></a>
             </li>
             <li class="socials-item">
-              <a class="socials-link" href="#">instagram</a>
+              <a class="socials-link socials-link-instagram" href="#" aria-label="instagram"></a>
             </li>
             <li class="socials-item">
-              <a class="socials-link" href="#">twitter</a>
+              <a class="socials-link socials-link-twitter" href="#" aria-label="twitter"></a>
             </li>
           </ul>
-          <a class="logo-html" href="https://htmlacademy.ru/intensive/htmlcss">Логотип HTML ACADEMY</a>
+          <a class="logo-html" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Логотип HTML ACADEMY"></a>
         </div>
       </div>
     </footer>
