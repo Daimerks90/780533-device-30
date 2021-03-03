@@ -285,7 +285,6 @@ img {
 .search__button:focus {
   background-color: var(--basic-black);
   color: var(--basic-white);
-  opacity: 0.3;
 }
 
 .search__input:focus + .search__button {
