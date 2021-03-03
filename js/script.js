@@ -57,4 +57,3 @@ modalMapLink.addEventListener('click', (evt) => {
 modalMapClose.addEventListener('click', () => {
   modalMap.classList.remove('modal__map--open');
 });
-

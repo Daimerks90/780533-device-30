@@ -38,35 +38,35 @@
 /* Variables */
 :root {
   --basic-black: #000000;
-  --basic-black-op4:  rgba(0, 0, 0, 0.4);
-  --basic-black-op3:  rgba(0, 0, 0, 0.3);
-  --basic-black-op2:  rgba(0, 0, 0, 0.2);
-  --basic-black-op018:  rgba(0, 0, 0, 0.18);
-  --basic-black-op015:  rgba(0, 0, 0, 0.15);
+  --opacity-black-4:  rgba(0, 0, 0, 0.4);
+  --opacity-black-3:  rgba(0, 0, 0, 0.3);
+  --opacity-black-2:  rgba(0, 0, 0, 0.2);
+  --opacity-black-018:  rgba(0, 0, 0, 0.18);
+  --opacity-black-015:  rgba(0, 0, 0, 0.15);
   --basic-dark: #363636;
   --basic-white: #FFFFFF;
-  --basic-white-op3: rgba(255, 255, 255, 0.3);
-  --basic-white-op6: rgba(255, 255, 255, 0.6);
-  --basic-white-op7: rgba(255, 255, 255, 0.7);
+  --opacity-white-3: rgba(255, 255, 255, 0.3);
+  --opacity-white-6: rgba(255, 255, 255, 0.6);
+  --opacity-white-7: rgba(255, 255, 255, 0.7);
   --basic-grey: #464646;
   --basic-half-grey: #7E7E7E;
-  --basic-grey-light: #E5E5E5;
   --basic-grey-middle: #DCDCDC;
+  --basic-grey-light: #E5E5E5;
   --basic-grey-ultra-light: #EAEAEA;
   --special-grey: #F2F2F2;
   --special-yellow: #F7E296;
   --special-yellow-dark: #F0C52E;
-
   --special-green: #91C92F;
+  --special-pink: #F6DADA;
   /* Pagination */
   --pagination-grey-main: #EBEBEB;
   --pagination-grey-secondary: #D9D9D9;
-  /* Fonts */
-  --main-font: "Open Sans", Arial, sans-serif;
-  --secondary-font: "Gilroy", Arial, sans-serif;
   /* Filter */
   --toggle-color: #C4C4C4;
   --disabled-button: #A6A6A6;
+  /* Fonts */
+  --main-font: "Open Sans", Arial, sans-serif;
+  --secondary-font: "Gilroy", Arial, sans-serif;
 }
 
 /* Global */
@@ -153,13 +153,14 @@ img {
 }
 
 .main-link:hover::before,
-.main-link:active::before {
+.main-link:active::before,
+.main-link:focus::before {
   top: 0;
   height: 100%;
 }
 
 .main-link:focus {
-  color: var(--basic-black-op3);
+  color: var(--opacity-black-3);
 }
 
 /* Main Title */
@@ -198,6 +199,8 @@ img {
 }
 
 .logo--footer {
+  display: block;
+  width: 163px;
   position: relative;
   top: auto;
   left: auto;
@@ -218,6 +221,10 @@ img {
   position: relative;
   display: flex;
   align-items: center;
+}
+
+.search:focus-within .search__button{
+  display: block;
 }
 
 .search::before {
@@ -276,8 +283,7 @@ img {
   background-color: var(--basic-black);
 }
 
-.search__button:hover,
-.search__button:active {
+.search__button:hover {
   background-color: var(--basic-black);
   color: var(--basic-white);
 }
@@ -287,8 +293,8 @@ img {
   color: var(--basic-white);
 }
 
-.search__input:focus + .search__button {
-  display: block;
+.search__button:active .search__button-text {
+  opacity: 0.3;
 }
 
 /* Login, Compare, Basket*/
@@ -346,7 +352,7 @@ img {
 }
 
 .user-links .user-links__login--out {
-  color: var(--basic-black-op3);
+  color: var(--opacity-black-3);
   padding-left: 21px;
 }
 
@@ -471,6 +477,10 @@ img {
   display: grid;
   grid-template-columns: 240px 186px min-content;
   grid-template-rows: repeat(3, auto);
+}
+
+.main-nav__link--catalog:focus-within .catalog-nav {
+  display: grid;
 }
 
 .catalog-nav__item:nth-last-child(2) {
@@ -964,7 +974,7 @@ img {
   padding-top: 48px;
   padding-bottom: 66px;
   background-color: var(--basic-dark);
-  color: var(--basic-white-op7);
+  color: var(--opacity-white-7);
 }
 
 .main-footer__top {
@@ -1008,11 +1018,11 @@ img {
 
 .footer-nav__link:hover,
 .footer-nav__link:active {
-  color: var(--basic-white-op6);
+  color: var(--opacity-white-6);
 }
 
 .footer-nav__link:focus {
-  color: var(--basic-white-op3);
+  color: var(--opacity-white-3);
 }
 
 .main-footer__middle {
@@ -1119,7 +1129,7 @@ img {
   top: 200px;
   left: calc(50% - 480px);
   background: var(--basic-white);
-  box-shadow: 0px 10px 16px var(--basic-black-op015);
+  box-shadow: 0px 10px 16px var(--opacity-black-015);
 }
 
 @keyframes modalWrite {
@@ -1177,7 +1187,7 @@ img {
   width: 960px;
   top: 200px;
   left: calc(50% - 480px);
-  box-shadow: 0px 10px 16px var(--basic-black-op015);
+  box-shadow: 0px 10px 16px var(--opacity-black-015);
 }
 
 @keyframes modalMap {
@@ -1250,7 +1260,12 @@ img {
   font-size: 14px;
   line-height: 19px;
   font-weight: 400;
-  color: var(--basic-black-op4);
+  color: var(--opacity-black-4);
+}
+
+.write__input:invalid,
+.write__text:invalid {
+  background-color: var(--special-pink);
 }
 
 .write__submit {
@@ -1272,7 +1287,7 @@ img {
   line-height: 19px;
   font-weight: 400;
   background-color: var(--special-grey);
-  color: var(--basic-black-op4);
+  color: var(--opacity-black-4);
   border: none;
 }
 
@@ -1395,7 +1410,7 @@ img {
   position: relative;
   width: 100%;
   height: 2px;
-  background-color: var(--basic-black-op2);
+  background-color: var(--opacity-black-2);
 }
 
 .filter__range-bar {
@@ -1416,7 +1431,7 @@ img {
   height: 4px;
   background: var(--toggle-color);
   border: 8px solid var(--basic-white);
-  box-shadow: 0px 2px 2px var(--basic-black-op018);
+  box-shadow: 0px 2px 2px var(--opacity-black-018);
   border-radius: 50%;
   box-sizing: content-box;
   cursor: pointer;
@@ -1437,6 +1452,7 @@ img {
 .filter__col {
   margin-bottom: 17px;
 }
+
 
 .filter__fieldset .filter__col:last-child {
   margin-bottom: 3px;
@@ -1510,6 +1526,11 @@ img {
   opacity: 0.6;
 }
 
+.filter__col:focus-within .filter__label::before,
+.filter__col:focus-within .filter__label::after {
+  opacity: 0.6;
+}
+
 .filter__radio + .filter__label:hover::after,
 .filter__radio + .filter__label:hover::before,
 .filter__radio + .filter__label:active::after,
@@ -1567,6 +1588,17 @@ img {
   width: 360px;
 }
 
+.catalog__item--status::before {
+  content: '';
+  position: absolute;
+  top: 29px;
+  right: 27px;
+  width: 62px;
+  height: 62px;
+  background-image: url("../img/icons/icon_status_new.svg");
+  background-repeat: no-repeat;
+}
+
 .catalog__info {
   margin-top: 24px;
   display: flex;
@@ -1595,11 +1627,13 @@ img {
   align-items: center;
 }
 
-.catalog__item:hover .catalog__buy {
+.catalog__item:hover .catalog__buy,
+.catalog__item:focus-within .catalog__buy {
   display: flex;
 }
 
-.catalog__item:hover .catalog__img {
+.catalog__item:hover .catalog__img,
+.catalog__item:focus-within .catalog__img {
   opacity: 0.7;
 }
 

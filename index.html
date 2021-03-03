@@ -19,7 +19,9 @@
         <form class="search" action="https://echo.htmlacademy.ru/" method="get">
           <label class="visually-hidden" for="search-field">Поиск по сайту</label>
           <input class="search__input" type="text" name="search" id="search-field" placeholder="Поиск по сайту">
-          <button class="search__button" type="submit">Найти</button>
+          <button class="search__button" type="submit">
+            <span class="search__button-text">Найти</span>
+          </button>
         </form>
         <div class="user-links">
           <a class="user-links__login" href="blank.html">Войти</a>
@@ -380,7 +382,7 @@
         </div>
         <div class="write__cell">
           <label class="write__label" for="message-field">Текст письма:</label>
-          <textarea class="write__text" name="message" id="message-field">В свободной форме</textarea>
+          <textarea class="write__text" name="message" id="message-field" required>В свободной форме</textarea>
         </div>
         <button class="main-link write__submit" type="submit">Отправить</button>
       </form>
