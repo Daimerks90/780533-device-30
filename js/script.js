@@ -8,7 +8,31 @@ const modalWrite = document.querySelector('.modal__write');
 const modalMapLink = document.querySelector('.contacts__img-link');
 const modalMapClose = document.querySelector('.modal__map--close');
 const modalMap = document.querySelector('.modal__map');
+const writeForm = document.querySelector('.write');
+const inputModalName = document.querySelector('.write__input--name');
+const inputModalEmail = document.querySelector('.write__input--email')
+const inputModalMessage = document.querySelector('.write__text');
 
+let storageName;
+let storageEmail;
+let storageMassage;
+let isStorageSupport = true;
+
+try {
+  storageName = localStorage.getItem('name');
+  storageEmail = localStorage.getItem('email');
+  storageMassage = localStorage.getItem('message');
+} catch(err) {
+  isStorageSupport = false;
+}
+
+writeForm.addEventListener('submit', () =>{
+  if (isStorageSupport) {
+    storageName = localStorage.setItem('name', inputModalName.value);
+    storageEmail = localStorage.setItem('email', inputModalEmail.value);
+    storageMassage = localStorage.setItem('message', inputModalMessage.value);
+  }
+})
 
 for (let i = 0; i < slidesButtons.length; i += 1) {
   slidesButtons[i].addEventListener('click', () => {
@@ -43,6 +67,9 @@ for (let i = 0; i < featuresTriggers.length; i += 1) {
 modalWriteLink.addEventListener('click', (evt) => {
   evt.preventDefault();
   modalWrite.classList.add('modal__write--open');
+  inputModalName.value = storageName;
+  inputModalEmail.value = storageEmail;
+  inputModalMessage.value = storageMassage;
 });
 
 modalWriteClose.addEventListener('click', () => {

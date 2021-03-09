@@ -120,6 +120,11 @@ img {
   grid-template-rows: min-content 1fr min-content;
 }
 
+.page__column {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Main-link */
 .main-link {
   position: relative;
@@ -1235,6 +1240,7 @@ img {
   line-height: 19px;
   font-weight: 400;
   background-color: var(--special-grey);
+
   border: none;
 }
 
