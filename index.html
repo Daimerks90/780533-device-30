@@ -175,7 +175,7 @@
             <li class="categories__item">
               <a class="categories__link" href="catalog.html">
                 <div class="categories__img-wrap">
-                  <img class="categories__img" src="img/popular/popular-virtual-reality.png" width="97" height="55" alt="">
+                  <img class="categories__img" src="img/popular/popular-virtual-reality.png" width="97" height="55" alt="очки виртуальной реальности">
                 </div>
                 Виртуальная реальность
               </a>
@@ -183,7 +183,7 @@
             <li class="categories__item">
               <a class="categories__link" href="catalog.html">
                 <div class="categories__img-wrap">
-                  <img class="categories__img" src="img/popular/popular-monopods-selfie.png" width="86" height="117" alt="">
+                  <img class="categories__img" src="img/popular/popular-monopods-selfie.png" width="86" height="117" alt="монопод для селфи с держателем">
                 </div>
                 Моноподы <br> для селфи
               </a>
@@ -191,7 +191,7 @@
             <li class="categories__item">
               <a class="categories__link" href="catalog.html">
                 <div class="categories__img-wrap">
-                  <img class="categories__img" src="img/popular/popular-action-camera.png" width="71" height="87" alt="">
+                  <img class="categories__img" src="img/popular/popular-action-camera.png" width="71" height="87" alt="экш камера">
                 </div>
                 Экшн-камеры
               </a>
@@ -199,7 +199,7 @@
             <li class="categories__item">
               <a class="categories__link" href="catalog.html">
                 <div class="categories__img-wrap">
-                  <img class="categories__img" src="img/popular/popular-fitness-bracelets.png" width="107" height="65" alt="">
+                  <img class="categories__img" src="img/popular/popular-fitness-bracelets.png" width="107" height="65" alt="фитнес браслет">
                 </div>
                 Фитнес-браслеты
               </a>
@@ -207,7 +207,7 @@
             <li class="categories__item">
               <a class="categories__link" href="catalog.html">
                 <div class="categories__img-wrap">
-                  <img class="categories__img" src="img/popular/popular-smart-watch.png" width="56" height="98" alt="">
+                  <img class="categories__img" src="img/popular/popular-smart-watch.png" width="56" height="98" alt="Умные часы">
                 </div>
                 Умные часы
               </a>
@@ -215,7 +215,7 @@
             <li class="categories__item">
               <a class="categories__link" href="catalog.html">
                 <div class="categories__img-wrap">
-                  <img class="categories__img" src="img/popular/popular-quadrocopters.png" width="132" height="69" alt="">
+                  <img class="categories__img" src="img/popular/popular-quadrocopters.png" width="132" height="69" alt="Квадрокоптеры">
                 </div>
                 Квадрокоптеры
               </a>
@@ -311,10 +311,10 @@
             <p class="contacts__text">
               Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
             </p>
-            <a class="contacts__img-link" href="#">
+            <a class="contacts__img-link" href="map.html">
               <img class="contacts__img" src="img/map.jpg" width="560" height="222" alt="Офис компании: улица Строителей, 15">
             </a>
-            <a class="main-link contacts__link" href="#">Напишите нам</a>
+            <a class="main-link contacts__link" href="write.html">Напишите нам</a>
           </section>
         </div>
       </div>
@@ -374,15 +374,15 @@
       <form class="write" action="https://echo.htmlacademy.ru/" method="post">
         <div class="write__cell">
           <label class="write__label" for="name-field">Ваше имя:</label>
-          <input class="write__input write__input--name" type="text" name="name" id="name-field" value="Имя Фамилия" required>
+          <input class="write__input write__input--name" type="text" name="name" id="name-field" placeholder="Имя Фамилия">
         </div>
         <div class="write__cell">
           <label class="write__label" for="email-field">Ваш e-mail:</label>
-          <input class="write__input write__input--email" type="email" name="email" id="email-field" value="email@example.com" required>
+          <input class="write__input write__input--email" type="email" name="email" id="email-field" placeholder="email@example.com">
         </div>
         <div class="write__cell">
           <label class="write__label" for="message-field">Текст письма:</label>
-          <textarea class="write__text" name="message" id="message-field" required>В свободной форме </textarea>
+          <textarea class="write__text" name="message" id="message-field" placeholder="В свободной форме"></textarea>
         </div>
         <button class="main-link write__submit" type="submit">Отправить</button>
       </form>
@@ -391,8 +391,8 @@
     <section class="modal modal__map">
       <h2 class="visually-hidden">Схема проезда</h2>
       <button class="modal__close modal__map--close" type="button" aria-label="Закрыть модальное окно"></button>
-      <img class="modal__map-img" src="img/map-modal.jpg" width="960" height="573" alt="Офис компании: улица Строителей, 15">
+      <iframe class="modal__frame" src="https://yandex.ru/map-widget/v1/-/CCUQvHszWD" width="960" height="573"></iframe>
     </section>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
