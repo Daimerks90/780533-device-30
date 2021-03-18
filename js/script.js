@@ -27,6 +27,7 @@ try {
 }
 
 writeForm.addEventListener('submit', (evt) => {
+  writeForm.classList.remove('modal__write--error');
   const validName = inputModalName.value.length;
   const validEmail = inputModalEmail.value.length;
   const validMessage = inputModalMessage.value.length;
@@ -41,6 +42,9 @@ writeForm.addEventListener('submit', (evt) => {
     if (validMessage < 3) {
       inputModalMessage.classList.add('write__text--invalid');
     }
+    writeForm.classList.remove('modal__write--error');
+    writeForm.offsetWidth = writeForm.offsetWidth;
+    writeForm.classList.add('modal__write--error');
   } else {
     if (isStorageSupport) {
       storageName = localStorage.setItem('name', inputModalName.value);
@@ -109,6 +113,7 @@ modalWriteLink.addEventListener('click', (evt) => {
 
 modalWriteClose.addEventListener('click', () => {
   modalWrite.classList.remove('modal__write--open');
+  writeForm.classList.remove('modal__write--error');
 });
 
 modalMapLink.addEventListener('click', (evt) => {
